@@ -6,7 +6,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: localhost
-- Generation Time: Feb 27, 2014 at 10:50 AM
+- Generation Time: Feb 27, 2014 at 10:55 AM
 - Server version: 5.1.33
 - PHP Version: 5.2.9
 -->
@@ -36,5 +36,29 @@
         <friday>6</friday>
         <saturday>7</saturday>
         <type_id>1</type_id>
+    </workers>
+    <workers>
+        <id>2</id>
+        <name>monir</name>
+        <sunday>2</sunday>
+        <monday>0</monday>
+        <tuesday>3</tuesday>
+        <wednesday>0</wednesday>
+        <thusday>4</thusday>
+        <friday>0</friday>
+        <saturday>35</saturday>
+        <type_id>4</type_id>
+    </workers>
+    <workers>
+        <id>3</id>
+        <name>monir</name>
+        <sunday>2</sunday>
+        <monday>3</monday>
+        <tuesday>5</tuesday>
+        <wednesday>0</wednesday>
+        <thusday>4</thusday>
+        <friday>4</friday>
+        <saturday>8</saturday>
+        <type_id>2</type_id>
     </workers>
 </diit>
