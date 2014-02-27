@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
     <title>DIIT</title>
-    <style> table
-{
-border-collapse:collapse;
-}
-table,th, td
-{
-border: 1px solid black;
-}</style>
+    <style>
+    table{border-collapse:collapse;}table,th,td{border: 1px solid black;}
+    </style>
     <body>
         <table width="500px">
             <thead>
@@ -26,6 +21,19 @@ border: 1px solid black;
             <tbody>
             <?php
                 $xml = simplexml_load_file('sample.xml');
+                
+                if($_POST)
+                {
+                    $xml->addAttribute('type', 'documentary');
+                    $newworker = $xml->addChild('worker');
+                    foreach($_POST as $key=>$value)
+                        $newworker->addAttribute($key, $value);
+                }
+
+                //$xml->asXML('sample2.xml');
+                //$xml = simplexml_load_file('sample.xml');
+                
+                $id = 0;
                 foreach($xml->worker as $worker)
                 {
                     $total = 0;
@@ -34,6 +42,8 @@ border: 1px solid black;
                     {
                         if($key[0]=='d')
                             $total += intval($value);
+                        else if($key=='id')
+                            $id = intval($value);
                         echo '<td>'.$value.'</td>'.PHP_EOL;
                     }
                     echo '<td>'.$total.'</td>'.PHP_EOL;
@@ -42,10 +52,12 @@ border: 1px solid black;
             ?>
             </tbody>
         </table>
-        <form name='input' action='insert.php' method='post'>
-            insert activity:
-            <input type='text' name='activity'/>
-            <input type='submit' value='send'/>
+        <h3>insert</h3>
+        <form name="input" method="post">
+            <input type="text" name="id" placeholder="Enter id" value="<? echo $id+1; ?>"/><br/>
+            <input type="text" name="type" placeholder="Enter type"/><br/>
+            <input type="text" name="name" placeholder="Enter name"/><br/>
+            <input type="submit" value="insert"/>
         </form>
     </body>
 </html>

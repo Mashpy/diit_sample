@@ -1,5 +1,5 @@
 <?php
-    header('Location:index.php');
+    header('Location: index.php');
     $xmldoc = new DOMDocument();
 $xmldoc->formatOutput = true;
 $xmldoc->preserveWhiteSpace = false;

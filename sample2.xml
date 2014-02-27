@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<workers>
+<workers type="documentary">
     <worker id="1" type="f" name="mashpy" dsun="3" dmon="5" dtue="7" dwed="2" dthu="5" dfri="6"/>
     <worker id="2" type="f" name="minhaz" dsun="9" dmon="8" dtue="7" dwed="5" dthu="3" dfri="4"/>
     <worker id="3" type="p" name="rodela" dsun="0" dmon="0" dtue="0" dwed="2" dthu="4" dfri="1"/>
     <worker id="4" type="p" name="shama" dsun="1" dmon="3" dtue="2" dwed="0" dthu="0" dfri="0"/>
-</workers>
+<worker name="purba"/></workers>
