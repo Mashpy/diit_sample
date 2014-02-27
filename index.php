@@ -16,7 +16,7 @@ if( ! $xml = simplexml_load_file('sample.xml') )
                         echo 'monday: '.$workers->monday.'<br />';
                         echo 'tuesday: '.$workers->tuesday.'<br />';
                         echo 'wednesday: '.$workers->wednesday.'<br />';
-                        echo 'monday: '.$workers->thusday.'<br />';
+                        echo 'thusday: '.$workers->thusday->getAttribute("type");
 
         }
         foreach( $xml->types as $type )

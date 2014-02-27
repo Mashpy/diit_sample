@@ -15,7 +15,15 @@
 - Database: 'diit'
 -->
 <diit>
-
+  <!-- Table types -->
+    <types>
+        <id>1</id>
+        <typename>fulltime</typename>
+    </types>
+    <types>
+        <id>2</id>
+        <typename>parttime</typename>
+    </types>
   <!-- Table workers -->
     <workers>
         <id>1</id>
@@ -24,7 +32,7 @@
         <monday>2</monday>
         <tuesday>3</tuesday>
         <wednesday>4</wednesday>
-        <thusday>5</thusday>
+        <thusday type="fulltime">5</thusday>
         <friday>6</friday>
         <saturday>7</saturday>
         <type_id>1</type_id>
@@ -53,14 +61,4 @@
         <saturday>8</saturday>
         <type_id>2</type_id>
     </workers>
-    
-      <!-- Table types -->
-    <types>
-        <id>1</id>
-        <typename>fulltime</typename>
-    </types>
-    <types>
-        <id>2</id>
-        <typename>parttime</typename>
-    </types>
 </diit>
