@@ -9,16 +9,23 @@ if( ! $xml = simplexml_load_file('sample.xml') )
     }
     else
     {
-        foreach( $xml as $workers )
+        foreach( $xml->workers as $workers )
         {
-            echo 'Name: '.$workers->name.'<br />';
-			echo 'sunday: '.$workers->sunday.'<br />';
-			echo 'monday: '.$workers->monday.'<br />';
-			echo 'tuesday: '.$workers->tuesday.'<br />';
-			echo 'wednesday: '.$workers->wednesday.'<br />';
-			echo 'monday: '.$workers->thusday.'<br />';
+            echo '***Name: <b>'.$workers->name.'</b><br />';
+                        echo 'sunday: '.$workers->sunday.'<br />';
+                        echo 'monday: '.$workers->monday.'<br />';
+                        echo 'tuesday: '.$workers->tuesday.'<br />';
+                        echo 'wednesday: '.$workers->wednesday.'<br />';
+                        echo 'monday: '.$workers->thusday.'<br />';
 
         }
+        foreach( $xml->types as $type )
+        {
+            echo '***ID: <b>'.$type->id.'</b><br />';
+                        echo 'typename: '.$type->typename.'<br />';
+
+        }
+        
 		
 		
     } 
