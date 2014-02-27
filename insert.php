@@ -1,6 +1,8 @@
 <?php
     header('Location:index.php');
     $xmldoc = new DOMDocument();
+	$xmldoc->formatOutput = true; 
+	$xmldoc->preserveWhiteSpace = false;
     $xmldoc->load('sample.xml');
 
     $newAct = $_POST['activity'];
