@@ -14,7 +14,7 @@
         }
     }
 ?>
-
+ 
 <form name='input' action='insert.php' method='post'>
     insert activity:
     <input type='text' name='activity'/>
