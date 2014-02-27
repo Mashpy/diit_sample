@@ -30,8 +30,7 @@
                         $newworker->addAttribute($key, $value);
                 }
 
-                //$xml->asXML('sample2.xml');
-                //$xml = simplexml_load_file('sample.xml');
+                $xml->asXML('sample.xml');
                 
                 $id = 0;
                 foreach($xml->worker as $worker)
@@ -57,6 +56,14 @@
             <input type="text" name="id" placeholder="Enter id" value="<? echo $id+1; ?>"/><br/>
             <input type="text" name="type" placeholder="Enter type"/><br/>
             <input type="text" name="name" placeholder="Enter name"/><br/>
+            <?
+                $days = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri');
+                foreach($days as $day)
+                {
+                    ?><input type="text" name="d<? echo $day; ?>" placeholder="Enter hour on <? echo $day; ?>" value="1"/><br/><?
+                }
+            
+            ?>
             <input type="submit" value="insert"/>
         </form>
     </body>
